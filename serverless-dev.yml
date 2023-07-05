@@ -1,0 +1,24 @@
+service: lambda-users
+
+useDotenv: true
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+functions:
+  users:
+    handler: dist/serverless.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: '{proxy+}' 
+    environment:
+      URI_MONGODB: mongodb+srv://domm:JRahXx42R3rDtoxw@domminstances.zz42vol.mongodb.net/domm-dev
