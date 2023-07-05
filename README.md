@@ -23,15 +23,17 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
+AWS Nestjs Lambda Template
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Installation Serverless Framework Global
 
-## Installation
-
+```bash
+$ npm install -g serverless
+```
+## Installation dependencies
 ```bash
 $ yarn install
 ```
-
 ## Running the app
 
 ```bash
@@ -40,34 +42,13 @@ $ yarn run start
 
 # watch mode
 $ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
 ```
-
-## Test
-
+## Running the local Serverless
 ```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+$ sls offline
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+## Deploy Serverless on AWS
+```bash
+$ sls deploy --stage {dev or prod } --aws-profile {your profile AWS on aws/config}
+```
