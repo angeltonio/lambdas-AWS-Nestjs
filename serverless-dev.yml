@@ -1,17 +1,17 @@
-service: lambda-name
+service: lambda-name # lambda name
 
-useDotenv: true
+useDotenv: true   #.env use
 
 plugins:
   - serverless-offline
 
 provider:
-  name: aws
-  runtime: nodejs18.x
-  region: us-east-1
+  name: aws  
+  runtime: nodejs18.x  #version of nodejs
+  region: us-east-1 #region to deploy
 
 functions:
-  name:
+  name:  #function name
     handler: dist/serverless.handler
     events:
       - http:
