@@ -1,4 +1,4 @@
-service: lambda-users
+service: lambda-name
 
 useDotenv: true
 
@@ -20,5 +20,3 @@ functions:
       - http:
           method: ANY
           path: '{proxy+}' 
-    environment:
-      URI_MONGODB: mongodb+srv://domm:JRahXx42R3rDtoxw@domminstances.zz42vol.mongodb.net/domm-dev
