@@ -11,7 +11,7 @@ provider:
   region: us-east-1
 
 functions:
-  users:
+  name:
     handler: dist/serverless.handler
     events:
       - http:
